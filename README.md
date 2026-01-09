@@ -1,43 +1,45 @@
 # Stack_stitcher_Maatlab
 
-这是一个用于**全组织切片成像（Serial Sectioning Imaging）**数据处理的 MATLAB 程序包，专门用于对图像堆叠（Stack）进行高精度的对齐与拼接。
+This repository provides a MATLAB-based implementation for high-precision alignment and stitching of serial-section imaging data. It is specifically designed to handle large-scale volumetric datasets, such as those used for mapping individual sensory nerve axons across multiple spinal levels.
 
-### 📌 项目背景
-本项目是基于以下学术论文中所述算法的 MATLAB 实现：
-> **Paper:** *Mapping of individual sensory nerve axons from digits to spinal cord with the "StitchIt" pipeline* > **Journal:** *Cell Research* (2024)  
-> **Authors:** [作者姓名, e.g., Zhang et al.]
+### 📌 Background
+This project is a MATLAB implementation based on the **"StitchIt" pipeline** introduced in the following research:
+> **Paper:** *Mapping of individual sensory nerve axons from digits to spinal cord with the "StitchIt" pipeline*  
+> **Journal:** *Cell Research* (2024)  
+> **Authors:** Zhang, X., et al.
 
-原始算法由原作者以 Python 版本发布，本项目提供了其 **MATLAB 版本实现**，旨在方便习惯使用 MATLAB 科学计算环境的研究者进行图像处理。
-
----
-
-### ✨ 主要功能
-- **XY 平面拼接 (`main_xy.m`)**: 处理单层切片内的多视野图像拼接。
-- **Z 轴对齐 (`main_z.m`)**: 处理不同切片层级间的堆叠对齐。
-- **高性能库支持**:
-  - 包含 `+stitchlib` 自定义函数包。
-  - 集成 `bfmatlab` (Bio-Formats)，支持多种显微镜原始格式（如 .czi, .nd2, .lif 等）的读取。
+While the original pipeline was developed in Python to enable 3D reconstruction of long-range axonal projections, this version provides a MATLAB alternative to support researchers within the MATLAB scientific computing environment.
 
 ---
 
-### 🚀 快速开始
-
-#### 前置条件
-- 已安装 **MATLAB** (建议 R2020b 或更高版本)。
-- 确保文件夹结构完整，包括 `+stitchlib` 和 `bfmatlab`。
-
-#### 安装与配置
-1. 下载或克隆本仓库到本地。
-2. 在 MATLAB 中将本项目的根目录添加至路径 (Set Path -> Add with Subfolders)。
-
-#### 运行
-- **横向拼接**: 运行 `main_xy.m`，根据脚本注释配置输入路径。
-- **纵向对齐**: 运行 `main_z.m` 处理 Z-stack 连续切片。
+### ✨ Key Features
+- **XY Plane Stitching (`main_xy.m`)**: Performs seamless stitching of multiple fields of view (FOV) within a single tissue section.
+- **Z-Axis Alignment (`main_z.m`)**: Aligns sequential tissue stacks to ensure continuity in 3D reconstructions.
+- **Library Support**:
+  - **`+stitchlib`**: A dedicated MATLAB package for custom stitching and alignment functions.
+  - **`bfmatlab`**: Integration with the Bio-Formats library to support various microscopy formats (e.g., .czi, .nd2, .lif).
 
 ---
 
-### 引用 (Citation)
-如果您在研究中使用了本代码，请务必引用以下原始论文：
+### 🚀 Getting Started
 
-```text
-Zhang, X., et al. (2024). Mapping of individual sensory nerve axons from digits to spinal cord with the "StitchIt" pipeline. Cell Research. [https://doi.org/10.1038/s41422-023-00XXX-X](https://doi.org/10.1038/s41422-023-00XXX-X)
+#### Prerequisites
+- **MATLAB**: Recommended version R2020b or later.
+- **Note**: Ensure the folder structure is maintained. Do not rename or remove the `+` prefix from the `+stitchlib` folder, as it is a MATLAB package directory.
+
+#### Installation
+1. Clone or download this repository to your local machine.
+2. Add the root directory and its subfolders to your MATLAB path:
+   ```matlab
+   addpath(genpath('your_path_to/Stack_stitcher'));
+   savepath;
+
+#### Usage
+- **Horizontal Stitching**: Open main_xy.m, configure your input data paths, and run the script to stitch FOVs within sections.
+- **Vertical Alignment**: Use main_z.m to align processed stacks for volumetric continuity.
+
+---
+
+### Acknowledgments
+Special thanks to the authors of the "StitchIt" pipeline for their contribution to the field of large-scale neural mapping and for developing the original algorithms. This MATLAB implementation aims to extend the accessibility of their work to the broader biological imaging community.
+
