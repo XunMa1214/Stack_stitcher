@@ -4,7 +4,7 @@ This repository provides a MATLAB-based implementation for high-precision alignm
 
 ### 📌 Background
 This project is a MATLAB implementation based on the **"StitchIt" pipeline** introduced in the following research:
-> **Paper:** *Mapping of individual sensory nerve axons from digits to spinal cord with the "StitchIt" pipeline*  
+> **Paper:** *Mapping of individual sensory nerve axons from digits to spinal cord with the transparent embedding solvent system*  
 > **Journal:** *Cell Research* (2024)  
 > **Authors:** Zhang, X., et al.
 
