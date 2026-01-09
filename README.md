@@ -27,11 +27,15 @@ While the original pipeline was developed in Python to enable 3D reconstruction 
 - **MATLAB**: Recommended version R2020b or later.
 - **Note**: Ensure the folder structure is maintained. Do not rename or remove the `+` prefix from the `+stitchlib` folder, as it is a MATLAB package directory.
 
-#### Installation
+#### Installation & Setup
 1. Clone or download this repository to your local machine.
-2. Add the root directory and its subfolders to your MATLAB path:
+2. Download `bfmatlab` from the official OME website if you haven't already.
+3. In MATLAB, add both this project and the `bfmatlab` folder to your path:
    ```matlab
+   % Add this project
    addpath(genpath('your_path_to/Stack_stitcher'));
+   % Add Bio-Formats
+   addpath('your_path_to/bfmatlab');
    savepath;
 
 #### Usage
