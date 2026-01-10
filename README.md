@@ -2,6 +2,9 @@
 
 This repository provides a MATLAB-based implementation for high-precision alignment and stitching of serial-section imaging data. It is specifically designed to handle large-scale volumetric datasets, such as those used for mapping individual sensory nerve axons across multiple spinal levels.
 
+[![MATLAB](https://img.shields.io/badge/MATLAB-R2020b+-blue.svg)](https://www.mathworks.com/products/matlab.html)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 ### 📌 Background
 This project is a MATLAB implementation based on the **"StitchIt" pipeline** introduced in the following research:
 > **Paper:** *Mapping of individual sensory nerve axons from digits to spinal cord with the transparent embedding solvent system*  
