@@ -1,4 +1,4 @@
-# Stack_stitcher_Maatlab
+# Stack_stitcher_Matlab
 
 This repository provides a MATLAB-based implementation for high-precision alignment and stitching of serial-section imaging data. It is specifically designed to handle large-scale volumetric datasets, such as those used for mapping individual sensory nerve axons across multiple spinal levels.
 
